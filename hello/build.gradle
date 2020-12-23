@@ -1,0 +1,19 @@
+import static org.green.deploy.Dependencies.junit
+
+plugins {
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation project(':util')
+    testImplementation junit;
+}
+
+application {
+    mainClass = 'org.green.hello.Hello'
+}
+

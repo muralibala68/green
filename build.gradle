@@ -1,0 +1,17 @@
+import org.green.deploy.Deployer
+import org.green.deploy.DeployerPlugin;
+import org.green.deploy.DeployerTask;
+
+apply plugin: DeployerPlugin
+
+repositories {
+    jcenter()
+}
+
+task hello {
+    doLast {
+        Deployer.sayDeploying()
+    }
+}
+
+task hello2(type: DeployerTask)
